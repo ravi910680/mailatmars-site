@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import { CheckCheck } from 'lucide-react';
 
 const BENEFITS = [

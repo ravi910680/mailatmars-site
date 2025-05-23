@@ -18,7 +18,7 @@ const testimonials = [
   {
     name: "Sofia R.",
     avatar: "/avatar.jpg",
-    text: `Our SDR team loves the accuracy and the speed of the platform. It’s become a critical part of our sales process.`,
+    text: `Our SDR team loves the accuracy and the speed of the platform. It's become a critical part of our sales process.`,
   },
 ]
 
