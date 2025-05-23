@@ -7,18 +7,18 @@ import Image from "next/image"
 const testimonials = [
   {
     name: "Human",
-    avatar: "/avatar.jpg", // Replace with actual avatar
+    avatar: "/avatar.jpg",
     text: `Exellius has cut our prospecting time in half! The verified email addresses and phone number finder tools help us connect with decision-makers faster.`,
   },
   {
     name: "John D.",
     avatar: "/avatar.jpg",
-    text: `We've seen a 40% improvement in response rates since switching to Exellius. The verified data is a game changer.`,
+    text: `We&rsquo;ve seen a 40% improvement in response rates since switching to Exellius. The verified data is a game changer.`,
   },
   {
     name: "Sofia R.",
     avatar: "/avatar.jpg",
-    text: `Our SDR team loves the accuracy and the speed of the platform. It's become a critical part of our sales process.`,
+    text: `Our SDR team loves the accuracy and the speed of the platform. It&rsquo;s become a critical part of our sales process.`,
   },
 ]
 
@@ -36,7 +36,7 @@ export default function Testimonials() {
         {/* Left: Testimonial Card */}
         <div className="bg-[#f0f4ff] p-20 rounded-xl shadow-sm text-gray-800 relative">
           <p className="italic text-sm leading-relaxed mb-6">
-            “{current.text}”
+            &ldquo;{current.text}&rdquo;
           </p>
 
           <div className="flex items-center gap-4">
@@ -74,11 +74,11 @@ export default function Testimonials() {
             About <span className="text-[#9856F2]">Exellius</span>
           </h2>
           <p className="mt-4 text-sm italic text-gray-700 font-medium">
-            Trusted by Sales Teams, Marketers & Data Professionals Worldwide
+            Trusted by Sales Teams, Marketers &amp; Data Professionals Worldwide
           </p>
           <div className="w-20 h-1 bg-[#9856F2] rounded mt-4 mb-6" />
           <p className="mt-6 text-sm text-gray-600 leading-relaxed">
-            Exellius has helped thousands of businesses find verified email addresses, validate contact details, and enrich lead data for better outreach. Here's what our customers have to say:
+            Exellius has helped thousands of businesses find verified email addresses, validate contact details, and enrich lead data for better outreach. Here&rsquo;s what our customers have to say:
           </p>
         </div>
       </div>
