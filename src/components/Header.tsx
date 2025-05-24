@@ -185,7 +185,7 @@ export default function Header() {
                     </div>
                     {mobileSubmenuOpen === label && (
                       <div className="pl-4 border-l border-gray-200 mt-2">
-                        {menuData[label].map(item => (
+                        {(menuData[label as keyof typeof menuData] || []).map(item => (
                           <Link key={item.href} href={item.href} className="block text-sm text-gray-700 py-1 hover:text-purple-600">
                             {item.label}
                           </Link>
