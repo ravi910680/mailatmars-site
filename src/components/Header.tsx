@@ -28,7 +28,7 @@ const featuresMenuGrouped = {
   ],
 }
 
-const menuData = {
+const menuData: Record<"Resources" | "Company" | "Legal", { label: string; href: string }[]> = {
   Resources: [
     { label: "Blogs", href: "/blogs" },
     { label: "Customer Stories", href: "/customer-stories" },
@@ -104,7 +104,7 @@ export default function Header() {
 
                 {label !== "Features" && label !== "Pricing Page" && label !== "Support" && activeDropdown === label && (
                   <div className="absolute top-full left-0 bg-white border border-gray-200 shadow-md rounded-md p-2 w-48 z-50">
-                    {menuData[label].map(link => (
+                    {menuData[label as keyof typeof menuData].map((link) => (
                       <Link
                         key={link.href}
                         href={link.href}
