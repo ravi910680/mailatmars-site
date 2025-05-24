@@ -35,7 +35,7 @@ export default function Testimonials() {
         
         {/* Left: Testimonial Card */}
         <div className="bg-[#f0f4ff] p-20 rounded-xl shadow-sm text-gray-800 relative">
-          <p className="italic text-sm leading-relaxed mb-6">
+          <p className="italic text-md leading-relaxed mb-6">
             &ldquo;{current.text}&rdquo;
           </p>
 
@@ -69,15 +69,15 @@ export default function Testimonials() {
 
         {/* Right: Section Info */}
         <div>
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
             What Our Customers Say<br />
             About <span className="text-[#9856F2]">Exellius</span>
           </h2>
-          <p className="mt-4 text-sm italic text-gray-700 font-medium">
+          <p className="mt-4 text-lg italic text-gray-700 font-medium">
             Trusted by Sales Teams, Marketers &amp; Data Professionals Worldwide
           </p>
-          <div className="w-20 h-1 bg-[#9856F2] rounded mt-4 mb-6" />
-          <p className="mt-6 text-sm text-gray-600 leading-relaxed">
+          <div className="w-36 h-1 bg-[#9856F2] rounded mt-4 mb-6" />
+          <p className="mt-6 text-md text-gray-900 leading-relaxed">
             Exellius has helped thousands of businesses find verified email addresses, validate contact details, and enrich lead data for better outreach. Here&rsquo;s what our customers have to say:
           </p>
         </div>

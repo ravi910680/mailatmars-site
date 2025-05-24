@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 export default function EmailVerifyFeature() {
   return (
     <section className="w-full py-20 px-4">
-      <div className="max-w-7xl mx-auto rounded-xl bg-[#FEF0EC] overflow-hidden grid grid-cols-1 md:grid-cols-2 shadow-sm">
+      <div className="max-w-7xl mx-auto rounded-xl bg-[#fbedc8] overflow-hidden grid grid-cols-1 md:grid-cols-2 shadow-sm">
         
         {/* Left: Image on background grid */}
         <div className="relative ">
@@ -15,7 +15,7 @@ export default function EmailVerifyFeature() {
             src="/left-back.png"
             alt="Background grid"
             fill
-            className="object-cover opacity-60"
+            className="object-cover "
           />
           <div className="relative z-10 flex items-center justify-center h-full p-8">
             <Image
@@ -23,15 +23,15 @@ export default function EmailVerifyFeature() {
               alt="Email verification UI"
               width={400}
               height={300}
-              className="rounded-md shadow-md"
+              className="rounded-md "
             />
           </div>
         </div>
 
         {/* Right: Content */}
-        <div className="bg-[#fdf4fc] p-10 flex flex-col justify-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 flex items-center gap-2">
-            <span className="text-[#9856F2]">04.</span>
+        <div className=" p-10 flex flex-col justify-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900  items-center gap-2">
+            <span className="text-[#9856F2]">04. </span>
              Data Enrichment & Lead Intelligence
           </h2>
           <div className="w-20 h-1 bg-[#9856F2] rounded mb-4 mt-5" />
@@ -39,12 +39,12 @@ export default function EmailVerifyFeature() {
           {/* Divider */}
           <div className="w-10 h-1  rounded mt-4 mb-6" />
 
-          <p className="text-sm text-gray-700 leading-relaxed mb-6">
+          <p className="text-md text-gray-700 leading-relaxed mb-6">
           Transform basic contact lists into rich prospect profiles with our AI-driven enrichment engine.
           </p>
 
           {/* Bullet List */}
-          <ul className="space-y-4 text-sm text-gray-800">
+          <ul className="space-y-4 text-md text-gray-800">
   {[
     "B2B Contact Intelligence — Enhance lead profiles with firmographics.",
     "Data Enrichment Platform — Improve lead scoring with verified data.",
@@ -55,7 +55,7 @@ export default function EmailVerifyFeature() {
       <li key={i} className="flex items-start gap-2">
         <CheckCircle className="text-[#9856F2] w-5 h-5 mt-1" />
         <span>
-          <strong className="font-semibold">{boldPart}</strong> — {rest}
+          <strong className="font-semibold text-gray-1000">{boldPart}</strong> — {rest}
         </span>
       </li>
     );

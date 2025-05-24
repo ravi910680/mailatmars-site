@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 export default function EmailVerifyFeature() {
   return (
     <section className="w-full py-20 px-4">
-      <div className="max-w-7xl mx-auto rounded-xl bg-[#FEF0EC] overflow-hidden grid grid-cols-1 md:grid-cols-2 shadow-sm">
+      <div className="max-w-7xl mx-auto rounded-xl bg-[#fbedc8] overflow-hidden grid grid-cols-1 md:grid-cols-2 ">
         
         {/* Left: Image on background grid */}
         <div className="relative ">
@@ -29,9 +29,9 @@ export default function EmailVerifyFeature() {
         </div>
 
         {/* Right: Content */}
-        <div className="bg-[#fdf4fc] p-10 flex flex-col justify-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 flex items-center gap-2">
-            <span className="text-[#9856F2]">02.</span>
+        <div className="bg-[#fbedc8] p-10 flex flex-col justify-center">
+          <h2 className="text-2xl sm:text-4xl font-bold text-gray-900  items-center gap-2">
+            <span className="text-[#9856F2]">02. </span>
             Verify Email Addresses in Real-Time
           </h2>
           <div className="w-20 h-1 bg-[#9856F2] rounded mb-4 mt-5" />
@@ -39,12 +39,12 @@ export default function EmailVerifyFeature() {
           {/* Divider */}
           <div className="w-10 h-1  rounded mt-4 mb-6" />
 
-          <p className="text-sm text-gray-700 leading-relaxed mb-6">
+          <p className="text-md text-gray-700 leading-relaxed mb-6">
             Our enterprise-grade email verification engine goes far beyond simple syntax checks to deliver industry-leading 98% deliverability rates.
           </p>
 
           {/* Bullet List */}
-          <ul className="space-y-4 text-sm text-gray-800">
+          <ul className="space-y-4 text-md text-gray-800">
   {[
     "Check Email Validity — Reduce bounce rates with instant verification.",
     "Bulk Email Lookup — Validate thousands of email addresses at once.",
@@ -55,7 +55,7 @@ export default function EmailVerifyFeature() {
       <li key={i} className="flex items-start gap-2">
         <CheckCircle className="text-[#9856F2] w-5 h-5 mt-1" />
         <span>
-          <strong className="font-semibold">{boldPart}</strong> — {rest}
+          <strong className="font-semibold text-gray-1000">{boldPart}</strong> — {rest}
         </span>
       </li>
     );

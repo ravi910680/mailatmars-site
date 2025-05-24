@@ -27,10 +27,10 @@ const BENEFITS = [
 
 export default function BenefitCards() {
   return (
-    <section className="w-full py-20 px-4 bg-white">
+    <section className="w-full py-100 px-4 pb-20 bg-white">
       <div className="max-w-7xl mx-auto text-center">
         {/* Title */}
-        <h2 className="text-3xl font-bold text-gray-900">
+        <h2 className="text-4xl font-bold text-gray-900">
           Who Benefits from <span className="text-[#9856F2]">Exellius</span>?
         </h2>
 
@@ -47,9 +47,9 @@ export default function BenefitCards() {
               key={i}
               className="bg-[#FFF6F7] rounded-xl p-6 shadow-md text-left"
             >
-              <CheckCheck className="text-[#9856F2] w-5 h-5 mt-1 mb-3" />
-              <h3 className="font-semibold text-gray-900">{item.title}</h3>
-              <p className="mt-2 text-sm text-gray-700">
+              <CheckCheck className="text-[#9856F2] w-6 h-6 mt-1 mb-3" />
+              <h3 className="font-semibold text-gray-900 text-lg">{item.title}</h3>
+              <p className="mt-2 text-sm text-gray-1000">
                 {item.description}
               </p>
             </div>

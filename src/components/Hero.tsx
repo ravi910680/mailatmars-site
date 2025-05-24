@@ -6,7 +6,7 @@ import Image from "next/image"
 
 export default function Hero() {
   return (
-    <section className="relative w-full bg-[#fcf4fc] pt-60 pb-20 px-6 overflow-hidden">
+    <section className="relative w-full bg-[#fcf4fc] pt-44 pb-20 px-6 overflow-hidden">
       {/* Top Background Image */}
       <Image
         src="/bg_top.png" // 🖼️ Replace with your actual asset
@@ -28,27 +28,27 @@ export default function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col lg:flex-row items-center ">
         {/* Left Content */}
         <div className="max-w-2xl">
-          <h1 className="text-4xl sm:text-4xl font-bold leading-tight text-gray-900">
+          <h1 className="text-4xl sm:text-5xl font-bold leading-tight text-gray-1000">
             <span className="text-[#9856F2]">Exellius</span> – The Ultimate B2B<br />
             Data Platform for Verified Leads &{" "}
             <span className="text-[#9856F2]">Email Validation</span>
           </h1>
 
-          <p className="mt-6 text-lg text-gray-600">
+          <p className="mt-6 text-lg text-gray-1000">
             Find, Verify, and Reach High-Quality B2B Leads with Confidence
           </p>
 
-          <p className="mt-2 text-sm text-gray-500">
-            98% Accurate B2B Data | 10M+ Verified Contacts | GDPR Compliant
+          <p className="mt-2 text-sm text-gray-900">
+            98% Accurate B2B Data | 100M+ Verified Contacts | GDPR Compliant
           </p>
 
           {/* CTA Buttons */}
-          <div className="mt-8 flex flex-wrap gap-4 items-center">
-          <Button size="lg" className="bg-[#9856F2] hover:bg-[#5a30aa] text-white">
+          <div className="mt-12 flex flex-wrap gap-4 items-center ">
+          <Button size="lg" className="bg-[#9856F2] hover:bg-[#5a30aa] text-white text-lg">
   Book a Demo
 </Button>
 
-            <Button variant="ghost" size="lg" className="text-[#6c3cbe]">
+            <Button variant="ghost" size="lg" className="text-[#6c3cbe] text-lg">
               Compare Plans <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </div>

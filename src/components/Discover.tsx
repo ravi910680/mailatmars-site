@@ -6,23 +6,23 @@ import { Button } from "@/components/ui/button"
 
 export default function EmailFinderFeature() {
   return (
-    <section className="w-full py-20 px-4">
+    <section className="w-full py-100 px-4">
       <div className="max-w-7xl mx-auto rounded-xl overflow-hidden grid grid-cols-1 md:grid-cols-2 bg-white shadow-sm">
         
         {/* Left: Content */}
         <div className="bg-[#FBF8FE] p-10 flex flex-col justify-center">
           
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
             <span className="text-[#9856F2]">05. </span> 
              Discover Company Tech Stack
           </h2>
           <div className="w-20 h-1 bg-[#9856F2] rounded mb-4 mt-5" />
-          <p className="mt-4 text-sm text-gray-900">
+          <p className="mt-4 text-md text-gray-900">
           Our technographic intelligence platform reveals the complete digital footprint of any business, from their CRM and marketing automation tools to ecommerce platforms and infrastructure providers.
           </p>
 
           {/* Feature List */}
-          <ul className="mt-6 space-y-3 text-sm text-gray-900">
+          <ul className="mt-6 space-y-3 text-md text-gray-900">
   {[
     "Website Technology Checker — Identify CMS, CRM, and marketing tools.",
     "Tech Stack Lookup — Gain insights into competitor tech usage.",
@@ -34,7 +34,7 @@ export default function EmailFinderFeature() {
       <li key={i} className="flex items-start gap-2">
         <CheckCircle className="text-[#9856F2] w-5 h-5 mt-1" />
         <span>
-          <strong className="font-semibold">{boldPart}</strong> — {rest}
+          <strong className="font-semibold text-gray-1000">{boldPart}</strong> — {rest}
         </span>
       </li>
     );

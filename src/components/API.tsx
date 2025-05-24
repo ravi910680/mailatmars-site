@@ -12,17 +12,17 @@ export default function EmailFinderFeature() {
         {/* Left: Content */}
         <div className="bg-[#FBF8FE] p-10 flex flex-col justify-center">
           
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
             <span className="text-[#9856F2]">07. </span> 
              API & CRM Integrations
           </h2>
           <div className="w-20 h-1 bg-[#9856F2] rounded mb-4 mt-5" />
-          <p className="mt-4 text-sm text-gray-900">
+          <p className="mt-4 text-md text-gray-900">
           Exellius provides enterprise-grade integration capabilities designed to embed our data intelligence directly into your existing workflows.
           </p>
 
           {/* Feature List */}
-          <ul className="mt-6 space-y-3 text-sm text-gray-900">
+          <ul className="mt-6 space-y-3 text-md text-gray-900">
   {[
     "Email Finder API — Automate email validation in your apps.",
     "Lead Enrichment API — Enhance CRM data programmatically.",
@@ -33,7 +33,7 @@ export default function EmailFinderFeature() {
       <li key={i} className="flex items-start gap-2">
         <CheckCircle className="text-[#9856F2] w-5 h-5 mt-1" />
         <span>
-          <strong className="font-semibold">{boldPart}</strong> — {rest}
+          <strong className="font-semibold text-gray-1000">{boldPart}</strong> — {rest}
         </span>
       </li>
     );
@@ -55,7 +55,7 @@ export default function EmailFinderFeature() {
             src="/right-back.png"
             alt="Grid background"
             fill
-            className="object-cover object-left opacity-50"
+            className="object-cover object-left "
           />
           <div className="relative z-10 flex items-center justify-center h-full p-8">
             <Image

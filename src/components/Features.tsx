@@ -9,33 +9,38 @@ export default function Features() {
       <div className="w-full max-w-[100%] grid grid-cols-1 md:grid-cols-2">
         
         {/* Left Column */}
-        <div className="bg-[#fcf4fc] px-10 py-12 flex flex-col justify-center h-full">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+        {/* Left Column */}
+<div className="bg-[#fcf4fc] px-6 sm:px-10 md:px-20 py-16 sm:py-24 md:py-36 flex flex-col justify-center h-full">
+
+          <h2 className="text-4xl sm:text-4xl font-bold text-gray-900">
             Precision-Built Tools for <br />
             <span className="text-[#9856F2]">Smarter Prospecting</span>
           </h2>
-          <div className="w-20 h-1 bg-[#9856F2] rounded mt-4 mb-6" /> {/* Divider after title */}
-          <p className="text-gray-900 text-sm leading-relaxed">
+          <div className="w-20 h-1 bg-[#9856F2] rounded mt-5 mb-6" /> {/* Divider after title */}
+          <p className="text-gray-900 text-md leading-relaxed">
             Exellius provides an all-in-one platform designed to transform how businesses discover, verify, and connect with their ideal customers. Our powerful suite of tools eliminates the guesswork from prospecting while ensuring you work with only the highest-quality data.
           </p>
         </div>
 
         {/* Right Column */}
-        <div className="bg-[#ecf4fc] px-10 py-12 flex flex-col justify-center h-full">
-          <h3 className="text-xl font-semibold text-gray-900">
+        {/* Right Column */}
+<div className="bg-[#ecf4fc] px-6 sm:px-10 md:px-10 py-12 sm:py-16 md:py-24 flex flex-col justify-center h-full">
+
+          <h3 className="text-3xl font-semibold text-gray-900">
             Technical Trust Builders
           </h3>
-          <div className="w-20 h-1 bg-[#9856F2] rounded mt-4 mb-6" /> {/* Divider after title */}
+          <div className="w-20 h-1 bg-[#9856F2] rounded mt-3 mb-6" /> {/* Divider after title */}
           
           {/* Image */}
-          <div className="relative h-24 w-[400px] mb-6">
-            <Image
-              src="/trust.png"
-              alt="Technical trust icons"
-              fill
-              className="object-contain"
-            />
-          </div>
+          <div className="relative h-24 w-full max-w-[400px] mb-6 mx-auto">
+  <Image
+    src="/trust.png"
+    alt="Technical trust icons"
+    fill
+    className="object-contain"
+  />
+</div>
+
 
           <Button className="bg-[#9856F2] hover:bg-[#813fe0] text-white w-fit">
             Avail Free Trial

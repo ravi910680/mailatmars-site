@@ -15,6 +15,7 @@ import Testimonials from "@/components/Testimonials"
 import StatsHighlight from "@/components/StatsHighlight"
 import Footer from "@/components/Footer"
 import CallToAction from "@/components/CallToAction"
+import FAQSection from "@/components/faqs"
 
 export default function Home() {
   return (
@@ -35,7 +36,9 @@ export default function Home() {
         <UseCasesTabs />  
         <Testimonials />  
         <StatsHighlight /> 
+        <FAQSection />
         <CallToAction />
+
         <Footer /> 
         
        
