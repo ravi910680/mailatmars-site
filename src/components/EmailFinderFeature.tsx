@@ -30,7 +30,7 @@ export default function EmailFinderFeature() {
               const [boldPart, rest] = item.split(" — ");
               return (
                 <li key={i} className="flex items-start gap-3">
-                  <CheckCircle className="text-[#9856F2] w-7 h-7 sm:w-6 sm:h-6 md:w-5 md:h-5 mt-1" />
+                  <CheckCircle className="text-[#9856F2] w-7 h-7 sm:w-6 sm:h-6 md:w-5 md:h-5" />
                   <span>
                     <strong className="font-semibold text-gray-1000">{boldPart}</strong> — {rest}
                   </span>

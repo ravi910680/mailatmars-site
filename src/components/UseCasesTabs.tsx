@@ -116,7 +116,7 @@ export default function UseCasesTabs() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 100 }}
             transition={{ duration: 0.5 }}
-            className="bg-white rounded-xl p-10 shadow-lg w-full max-w-full mx-auto text-center"
+            className="bg-white rounded-xl p-6 sm:p-10 shadow-lg w-full max-w-full mx-auto text-center"
           >
             <h3 className="text-3xl font-bold text-[#9856F2] mb-4">
               {tabs.findIndex((t) => t.key === activeTab) + 1}. {tabData.title}
@@ -145,7 +145,7 @@ export default function UseCasesTabs() {
             >
               {tabData.highlights.map((item, idx) => (
                 <li key={idx} className="flex items-center gap-2">
-                  <CheckCircle className="text-[#9856F2] w-5 h-5" />
+                  <CheckCircle className="text-[#9856F2] w-7 h-7 sm:w-6 sm:h-6 md:w-5 md:h-5 " />
                   <span dangerouslySetInnerHTML={{ __html: item }} />
                 </li>
               ))}

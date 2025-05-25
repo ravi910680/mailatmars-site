@@ -29,7 +29,7 @@ export default function EmailVerifyFeature() {
         </div>
 
         {/* Right: Content */}
-        <div className=" p-10 flex flex-col justify-center">
+        <div className=" p-6 sm:p-10 flex flex-col justify-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 items-center gap-2">
             <span className="text-[#9856F2]">06. </span>
              Amazon Seller Data & B2B Leads
@@ -53,7 +53,7 @@ export default function EmailVerifyFeature() {
     const [boldPart, rest] = item.split(" — ");
     return (
       <li key={i} className="flex items-start gap-2">
-        <CheckCircle className="text-[#9856F2] w-5 h-5 mt-1" />
+         <CheckCircle className="text-[#9856F2] w-7 h-7 sm:w-6 sm:h-6 md:w-5 md:h-5 " />
         <span>
           <strong className="font-semibold text-gray-1000">{boldPart}</strong> — {rest}
         </span>

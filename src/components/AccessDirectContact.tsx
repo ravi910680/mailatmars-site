@@ -10,7 +10,7 @@ export default function EmailFinderFeature() {
       <div className="max-w-7xl mx-auto rounded-xl overflow-hidden grid grid-cols-1 md:grid-cols-2 bg-white shadow-sm">
         
         {/* Left: Content */}
-        <div className="bg-[#FBF8FE] p-10 flex flex-col justify-center">
+        <div className="bg-[#FBF8FE]  p-6 sm:p-10 flex flex-col justify-center">
           
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
             <span className="text-[#9856F2]">03. </span> 
@@ -22,17 +22,16 @@ export default function EmailFinderFeature() {
           </p>
 
           {/* Feature List */}
-          <ul className="mt-6 space-y-3 text-md text-gray-900">
+          <ul className="mt-6 space-y-4 text-md text-gray-800">
   {[
-    "Executive Direct Dial Finder — Bypass gatekeepers with C-suite mobile numbers (85% coverage)",
-    "Department Routing — Identify exact extensions for purchasing/IT teams",
-    "Verified Mobile Numbers — Real-time carrier verification",
-    "Contact Timeline — See role changes/company transitions over the past 5 years",
+    "Check Email Validity — Reduce bounce rates with instant verification.",
+    "Bulk Email Lookup — Validate thousands of email addresses at once.",
+    "Verified Contact Data — Ensure only accurate leads enter your funnel.",
   ].map((item, i) => {
     const [boldPart, rest] = item.split(" — ");
     return (
       <li key={i} className="flex items-start gap-2">
-        <CheckCircle className="text-[#9856F2] w-5 h-5 mt-1" />
+        <CheckCircle className="text-[#9856F2] w-7 h-7 sm:w-6 sm:h-6 md:w-5 md:h-5 " />
         <span>
           <strong className="font-semibold text-gray-1000">{boldPart}</strong> — {rest}
         </span>
