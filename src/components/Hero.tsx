@@ -1,86 +1,50 @@
 "use client"
-
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 
 export default function Hero() {
   return (
-    <section className="relative w-full bg-[#fcf4fc] pt-44 pb-20 px-6 overflow-hidden">
-      {/* Top Background Image */}
-      <Image
-        src="/bg_top.png" // 🖼️ Replace with your actual asset
-        alt="Top Background"
-        width={1920}
-        height={400}
-        className="absolute top-0 left-0 w-full object-cover z-0"
-      />
-
-      {/* Bottom Background Image */}
-      <Image
-        src="/bg_bottom.png" // 🖼️ Replace with your actual asset
-        alt="Bottom Background"
-        width={1920}
-        height={400}
-        className="absolute bottom-0 left-0 w-full object-cover z-0"
-      />
-
-      <div className="relative z-10 max-w-7xl mx-auto flex flex-col lg:flex-row items-center ">
+    <section className="relative w-full bg-[#ffe7ff] pt-64 pb-40 px-6 overflow-hidden">
+      <div className="relative z-10 max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-center text-center lg:text-left">
         {/* Left Content */}
-        <div className="max-w-2xl">
-          <h1 className="text-4xl sm:text-5xl font-bold leading-tight text-gray-1000">
-            <span className="text-[#9856F2]">Exellius</span> – The Ultimate B2B<br />
-            Data Platform for Verified Leads &{" "}
-            <span className="text-[#9856F2]">Email Validation</span>
+        <div className="max-w-5xl">
+          <h1 className="text-4xl sm:text-5xl font-bold leading-tight text-gray-1000 text-center">
+            Create, Send and Track Your
+            Email Campaigns <br /> with <span className="text-[#6c3cbe]">AI-powered</span> Software
           </h1>
 
-          <p className="mt-6 text-lg text-gray-1000">
-            Find, Verify, and Reach High-Quality B2B Leads with Confidence
-          </p>
-
-          <p className="mt-2 text-sm text-gray-900">
-            98% Accurate B2B Data | 100M+ Verified Contacts | GDPR Compliant
+          <p className="mt-6 text-lg text-gray-1000 text-center">
+            Smarter Email Campaigns Start Here — Real-Time Tracking, Deep Insights, and Clear Reporting That Drive Results.
           </p>
 
           {/* CTA Buttons */}
-          <div className="mt-12 flex flex-wrap gap-4 items-center ">
-          <Button size="lg" className="bg-[#9856F2] hover:bg-[#5a30aa] text-white text-lg">
-  Book a Demo
-</Button>
-
-            <Button variant="ghost" size="lg" className="text-[#6c3cbe] text-lg">
-              Compare Plans <ArrowRight className="ml-2 h-4 w-4" />
+          <div className="mt-12 flex flex-wrap gap-4 items-center justify-center">
+            <Link href="https://calendly.com/sanket-mailatmars/30min" passHref>
+            <Button  className="bg-[#6c3cbe] hover:bg-[#5a30aa] text-white text-lg">
+              Book a Demo
             </Button>
+            </Link>
+
+           <Link href="/pricing" passHref>
+  <Button variant="ghost" className="text-[#6c3cbe] text-lg">
+    Compare Plans <ArrowRight className="ml-2 h-4 w-4" />
+  </Button>
+</Link>
           </div>
 
-          {/* Social Proof Image */}
-          <div className="mt-6">
+          {/* Centered Image */}
+          <div className="mt-12 flex justify-center">
             <Image
-              src="/star.png" // 🖼️ Your actual image path here
-              alt="Customer Reviews"
-              width={240}
-              height={60}
+              src="/hero.png"
+              alt="Hero Illustration"
+              width={900}
+              height={400}
+              className="mx-auto"
+              priority
             />
           </div>
-        </div>
-
-        {/* Right Content */}
-       
-
-        {/* Search Field (moved out of image box) */}
-        <div className="flex w-full max-w-md rounded-lg border border-gray-200 shadow-sm overflow-hidden">
-          <input
-            type="text"
-            placeholder="exellius"
-            className="flex-1 px-3 py-2 text-sm outline-none bg-white"
-          />
-          <div className="flex items-center px-3 bg-white">
-            <span className="text-gray-500">@</span>
-          </div>
-          <div className="flex items-center px-3 text-sm text-gray-500">
-            exellius.com
-          </div>
-          <Button className="rounded-none rounded-r-md">Find</Button>
         </div>
       </div>
     </section>

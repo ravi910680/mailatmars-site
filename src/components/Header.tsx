@@ -2,47 +2,55 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { useState } from "react"
-import { ChevronDown, Menu, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { useState, useEffect } from "react"
+import {
+  ChevronDown,
+  Menu,
+  X,
+  LayoutTemplate,
+  Paintbrush2,
+  
+  Code,
+  Users2,
+  Eye,
+  
+  Link as LinkIcon,
+  Server,
+  Smile,
+  FlaskConical,
+  Repeat,
+  Send,
+  BarChart,
+  Clock,
+  Globe,
+} from "lucide-react"
 
 const featuresMenuGrouped = {
-  Product: [
-    { label: "Campaigns", desc: "Send cold emails.", href: "/lead-discovery" },
-    { label: "Discover", desc: "Find B2B leads.", href: "/lead-discovery" },
-    { label: "Domain Search", desc: "Find email addresses of a company.", href: "/domain-search" },
-    { label: "Email Finder", desc: "Find any professional's email address.", href: "/professional-email-finder" },
-    { label: "Email Verifier", desc: "Check the validity of an email address.", href: "/advanced-email-verifier" },
-    { label: "Signals", desc: "Find prospects using intent data.", href: "/data-enrichment-suite" },
-    { label: "TechLookup", desc: "List websites by tech usage.", href: "/website-technology-checker" },
+  "Design like a Pro": [
+    { label: "Drag and drop builder", href: "/drag-n-drop", icon: LayoutTemplate },
+    { label: "In-Built text editor", href: "/text-editor", icon: Paintbrush2 },
+    { label: "Custom HTML editor", href: "/custom-html", icon: Code },
   ],
-  "Data Platform": [
-    { label: "Data Platform", desc: "Industry-leading B2B email data at scale.", href: "/data-platform" },
-    { label: "Bulk tasks", desc: "Find or verify email addresses in bulk.", href: "/bulk-email-finder" },
-    { label: "API", desc: "Integrate Hunter into your workflow.", href: "/developer-api-hub" },
+  "Target audience": [
+    { label: "Segmentation", href: "/segmentation", icon: Users2 },
+    { label: "Contact monitoring", href: "/contact-monitoring", icon: Eye },
+   
+    
   ],
-  Integrations: [
-    { label: "Integrations", desc: "Connect to your favorite application.", href: "/developer-api-hub" },
-    { label: "Browser extension", desc: "Find emails while you're browsing.", href: "/browser-extension" },
-    { label: "Google Sheets add-on", desc: "Verify emails in Google Sheets.", href: "/google-sheets-addon" },
+  "Improve engagement": [
+    { label: "Custom domains", href: "/custom-domain", icon: LinkIcon },
+    { label: "Dedicated IP", href: "/dedicated-ip", icon: Server },
+    { label: "Personalisation", href: "/email-personalisation", icon: Smile },
   ],
-}
-
-const menuData: Record<"Resources" | "Company" | "Legal", { label: string; href: string }[]> = {
-  Resources: [
-    { label: "Blogs", href: "/blogs" },
-    { label: "Customer Stories", href: "/customer-stories" },
-    { label: "Templates", href: "/templates" },
-    { label: "Help Center", href: "/help-center" },
+  "Enhance communication": [
+    { label: "A/B testing", href: "/ab-testing", icon: FlaskConical },
+    { label: "Drip campaign", href: "/drip-campaign", icon: Repeat },
+    { label: "SMTP services", href: "/smtp-service", icon: Send },
   ],
-  Company: [
-    { label: "About Us", href: "/about-us" },
-    { label: "Our Data", href: "/our-data" },
-    { label: "Careers", href: "/careers" },
-  ],
-  Legal: [
-    { label: "Terms & Conditions", href: "/terms-and-conditions" },
-    { label: "Privacy Policy", href: "/privacy-policy" },
+  "Track metrics": [
+    { label: "Advanced reports", href: "/advanced-report", icon: BarChart },
+    { label: "Timestamp", href: "/time-stamp", icon: Clock },
+    { label: "Deliver by time zone", href: "/delivery-by-timezone", icon: Globe },
   ],
 }
 
@@ -50,160 +58,173 @@ export default function Header() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [mobileSubmenuOpen, setMobileSubmenuOpen] = useState<string | null>(null)
+  const [scrolled, setScrolled] = useState(false)
 
   const toggleDropdown = (menu: string) => {
     setActiveDropdown(prev => (prev === menu ? null : menu))
   }
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
   return (
-    <>
-      <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-7xl bg-white rounded-full shadow-md px-6 py-6">
-        <div className="flex items-center justify-between w-full">
+    <div>
+      <header className={`fixed top-0 left-0 right-0 z-50 w-full px-6 py-4 transition-colors duration-300  ${
+        scrolled ? 'bg-white border-b-2' : 'bg-transparent'
+      }`}>
+        <div className="flex items-center justify-between w-full max-w-7xl mx-auto">
           <Link href="/">
-            <Image src="/logo.png" alt="Exellius Logo" width={120} height={40} priority />
+            <Image
+              src="/mailatmars-logo.png"
+              alt="MailatMars Logo"
+              width={120}
+              height={40}
+              priority
+            />
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-gray-900">
-            {["Features", "Pricing Page", "Support", ...Object.keys(menuData)].map(label => (
-              <div
-                key={label}
-                className="relative"
-                onMouseEnter={() => toggleDropdown(label)}
-                onMouseLeave={() => setActiveDropdown(null)}
-              >
-                {label === "Pricing Page" ? (
-                  <Link href="/pricing" className="flex items-center gap-1 hover:text-purple-600 p-2">Pricing</Link>
-                ) : label === "Support" ? (
-                  <Link href="/contact-us" className="flex items-center gap-1 hover:text-purple-600 p-2">Support</Link>
-                ) : (
-                  <span className="flex items-center gap-1 cursor-pointer hover:text-purple-600 p-2">
-                    {label}
-                    <ChevronDown size={14} />
-                  </span>
-                )}
+          <nav className="hidden lg:flex items-center gap-6 text-md font-medium text-[#40129b]">
+            <div
+              className="relative"
+              onMouseEnter={() => toggleDropdown("Features")}
+              onMouseLeave={() => setActiveDropdown(null)}
+            >
+              <span className="flex items-center gap-1 text-gray-800 cursor-pointer hover:text-[#6c3cbe] p-2">
+                Features
+                <ChevronDown size={14} />
+              </span>
 
-                {label === "Features" && activeDropdown === label && (
-                  <div className="absolute top-full left-0 bg-white border border-gray-200 shadow-md rounded-md z-50 w-[720px] grid grid-cols-3 gap-6 after:content-[''] after:absolute after:top-4 after:right-0 after:h-[90%] after:w-px after:bg-gray-200">
-                    {Object.entries(featuresMenuGrouped).map(([section, items]) => (
-                      <div key={section} className="border-r border-gray-200 pr-4 p-4">
-                        <h4 className="text-xs font-semibold text-gray-500 uppercase mb-5">{section}</h4>
-                        <ul className="space-y-2">
-                          {items.map(item => (
-                            <li key={item.href}>
-                              <Link href={item.href} className="block text-sm text-gray-800 hover:text-purple-600 mb-4">
-                                <div className="font-medium">{item.label}</div>
-                                <div className="text-sm text-gray-400">{item.desc}</div>
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                )}
+              {activeDropdown === "Features" && (
+                <div className="absolute top-full left-0 bg-white border border-gray-200 shadow-lg rounded-xl p-6 w-[720px] grid grid-cols-3 gap-6 z-50">
+                  {Object.entries(featuresMenuGrouped).map(([section, items]) => (
+                    <div key={section}>
+                      <h4 className="text-xs font-semibold text-gray-500 uppercase mb-4">{section}</h4>
+                      <ul className="space-y-3">
+                        {items.map(({ href, label, icon: Icon }) => (
+                          <li key={href}>
+                            <Link href={href} className="flex items-center gap-4 font-semibold text-gray-800 hover:text-[#6c3cbe] pt-2 pb-2">
+                              <Icon size={14} /> {label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
 
-                {label !== "Features" && label !== "Pricing Page" && label !== "Support" && activeDropdown === label && (
-                  <div className="absolute top-full left-0 bg-white border border-gray-200 shadow-md rounded-md p-2 w-48 z-50">
-                    {menuData[label as keyof typeof menuData].map((link) => (
-                      <Link
-                        key={link.href}
-                        href={link.href}
-                        className="block px-3 py-1 text-sm text-gray-700 hover:text-purple-600"
-                      >
-                        {link.label}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
+            <Link href="/pricing" className="hover:text-[#6c3cbe] p-2 text-gray-800">Pricing</Link>
+            <Link href="https://mailatmars.document360.io/v1/en" className="hover:text-[#6c3cbe] p-2 text-gray-800">Resource</Link>
+            <Link href="https://wa.me/917016992938" className="hover:text-[#6c3cbe] p-2 text-gray-800">Contact us</Link>
           </nav>
 
           <div className="hidden md:flex gap-2">
-            <Button variant="outline" className="text-sm px-4 py-2">Book a Demo</Button>
-            <Button className="text-sm px-4 py-2">Create Account</Button>
+            <Link
+  href="https://calendly.com/ravi-mailatmars/30min"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-sm px-4 py-2  text-black hover:bg-white rounded-md inline-flex items-center justify-center"
+>
+  Book a Demo
+</Link>
+
+            <Link
+  href="https://account-v2.mailatmars.com/account/create"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-sm px-4 py-2 bg-[#6c3cbe] text-white hover:opacity-90 rounded-md inline-flex items-center justify-center"
+>
+  Create Account
+</Link>
+
           </div>
 
           <div className="flex lg:hidden">
-            <Menu size={24} className="text-gray-700 cursor-pointer" onClick={() => setMobileOpen(true)} />
+            <Menu size={24} className="text-[#40129b]" onClick={() => setMobileOpen(true)} />
           </div>
         </div>
-      </header>
 
-      {mobileOpen && (
-        <div className="fixed inset-0 bg-white z-[9999] p-4 pt-6 flex flex-col justify-between overflow-y-auto">
-          <div>
-            <div className="flex items-center justify-between mb-4">
-              <Link href="/">
-                <Image src="/logo.png" alt="Exellius Logo" width={100} height={36} />
-              </Link>
-              <X size={24} className="text-gray-700 cursor-pointer" onClick={() => setMobileOpen(false)} />
+        {mobileOpen && (
+          <div className="fixed inset-0 bg-white z-[9999] p-6 pt-10 flex flex-col justify-between overflow-y-auto">
+            <div>
+              <div className="flex items-center justify-between mb-6">
+                <Link href="/">
+                  <Image
+                    src="/mailatmars-logo.png"
+                    alt="MailatMars Logo"
+                    width={100}
+                    height={36}
+                  />
+                </Link>
+                <X size={24} className="text-gray-700 cursor-pointer" onClick={() => setMobileOpen(false)} />
+              </div>
+
+              <div className="space-y-4">
+                <div>
+                  <div
+                    className="flex items-center justify-between text-[#40129b] font-semibold cursor-pointer"
+                    onClick={() => setMobileSubmenuOpen(mobileSubmenuOpen === "Features" ? null : "Features")}
+                  >
+                    Features
+                    <ChevronDown
+                      size={18}
+                      className={`transition-transform ${mobileSubmenuOpen === "Features" ? 'rotate-180' : ''}`}
+                    />
+                  </div>
+                  {mobileSubmenuOpen === "Features" && (
+                    <div className="mt-3 space-y-4 pl-3">
+                      {Object.entries(featuresMenuGrouped).map(([section, items]) => (
+                        <div key={section}>
+                          <p className="text-xs uppercase text-gray-400 font-semibold mb-2">{section}</p>
+                          <ul className="space-y-1">
+                            {items.map(({ href, label, icon: Icon }) => (
+                              <li key={href}>
+                                <Link href={href} className="flex items-center gap-2 text-sm text-gray-700 hover:text-[#6c3cbe]">
+                                  <Icon size={14} /> {label}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                <Link href="/pricing" className="block text-[#40129b] font-semibold">Pricing</Link>
+                <Link href="/contact" className="block text-[#40129b] font-semibold">Contact</Link>
+              </div>
             </div>
 
-            {["Features", "Pricing Page", "Support", ...Object.keys(menuData)].map(label => (
-              <div key={label} className="mb-2">
-                {label === "Pricing Page" ? (
-                  <Link href="/pricing" className="block text-gray-800 py-2">Pricing</Link>
-                ) : label === "Support" ? (
-                  <Link href="/contact-us" className="block text-gray-800 py-2">Support</Link>
-                ) : label === "Features" ? (
-                  <>
-                    <div
-                      className="flex items-center justify-between cursor-pointer text-gray-800 py-2"
-                      onClick={() => setMobileSubmenuOpen(mobileSubmenuOpen === label ? null : label)}
-                    >
-                      Features
-                      <ChevronDown size={16} className={`transform transition-transform ${mobileSubmenuOpen === label ? "rotate-180" : "rotate-0"}`} />
-                    </div>
-                    {mobileSubmenuOpen === label && (
-                      <div className="pl-4 border-l border-gray-200 mt-2">
-                        {Object.entries(featuresMenuGrouped).map(([section, items]) => (
-                          <div key={section} className="mb-4">
-                            <p className="text-xs uppercase text-gray-400 font-semibold mb-2">{section}</p>
-                            <ul className="space-y-1">
-                              {items.map(item => (
-                                <li key={item.href}>
-                                  <Link href={item.href} className="block text-sm text-gray-700 hover:text-purple-600">
-                                    {item.label}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                  </>
-                ) : (
-                  <>
-                    <div
-                      className="flex items-center justify-between cursor-pointer text-gray-800 py-2"
-                      onClick={() => setMobileSubmenuOpen(mobileSubmenuOpen === label ? null : label)}
-                    >
-                      {label}
-                      <ChevronDown size={16} className={`transform transition-transform ${mobileSubmenuOpen === label ? "rotate-180" : "rotate-0"}`} />
-                    </div>
-                    {mobileSubmenuOpen === label && (
-                      <div className="pl-4 border-l border-gray-200 mt-2">
-                        {(menuData[label as keyof typeof menuData] || []).map(item => (
-                          <Link key={item.href} href={item.href} className="block text-sm text-gray-700 py-1 hover:text-purple-600">
-                            {item.label}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </>
-                )}
-              </div>
-            ))}
-          </div>
+            <div className="mt-6 flex flex-col gap-3">
+             <Link
+  href="https://calendly.com/ravi-mailatmars/30min"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-sm px-4 py-2  text-black hover:bg-white rounded-md inline-flex items-center justify-center"
+>
+  Book a Demo
+</Link>
 
-          <div className="mt-6 flex flex-col gap-3">
-            <Button variant="outline" className="w-full">Book a Demo</Button>
-            <Button className="w-full">Create Account</Button>
+              <Link
+  href="https://account-v2.mailatmars.com/account/create"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-sm px-4 py-2 bg-[#6c3cbe] text-white hover:opacity-90 rounded-md inline-flex items-center justify-center"
+>
+  Create Account
+</Link>
+
+            </div>
           </div>
-        </div>
-      )}
-    </>
+        )}
+      </header>
+    </div>
   )
 }
