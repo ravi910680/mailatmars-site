@@ -15,7 +15,7 @@ export default function ABTestingPage() {
         {/* A/B Testing Section */}
         <section className="bg-[#fce4f4] py-16 px-6 pt-36">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
-            <div className="max-w-xl">
+            <div className="max-w-xl order-2 lg:order-1">
               <div className="flex items-center gap-2 mb-3 text-sm font-medium text-[#be185d]">
                 <FlaskConical size={18} /> A/B Testing
               </div>
@@ -35,7 +35,7 @@ export default function ABTestingPage() {
               alt="A/B Testing Illustration"
               width={620}
               height={360}
-              className="rounded-xl object-cover"
+              className="rounded-xl object-cover order-1 lg:order-2"
             />
           </div>
         </section>
@@ -43,7 +43,7 @@ export default function ABTestingPage() {
         {/* Subject Line Testing */}
         <section className="bg-[#e0f2fe] py-16 px-6">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center justify-between gap-12">
-            <div className="max-w-xl">
+            <div className="max-w-xl order-2 lg:order-1">
               <div className="flex items-center gap-2 mb-3 text-sm font-medium text-[#0369a1]">
                 <Text size={18} /> Subject Line Testing
               </div>
@@ -63,7 +63,7 @@ export default function ABTestingPage() {
               alt="Subject Line Testing"
               width={620}
               height={360}
-              className="rounded-xl object-cover"
+              className="rounded-xl object-cover  order-1 lg:order-2"
             />
           </div>
         </section>

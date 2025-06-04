@@ -151,9 +151,9 @@ export default function Header() {
         </div>
 
         {mobileOpen && (
-          <div className="fixed inset-0 bg-white z-[9999] p-6 pt-10 flex flex-col justify-between overflow-y-auto">
+          <div className="fixed inset-0 bg-white z-[9999] p-6  flex flex-col justify-between overflow-y-auto">
             <div>
-              <div className="flex items-center justify-between mb-6">
+              <div className="flex items-center justify-between mb-12">
                 <Link href="/">
                   <Image
                     src="/mailatmars-logo.png"

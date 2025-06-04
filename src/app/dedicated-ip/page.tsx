@@ -15,7 +15,7 @@ export default function DedicatedIPPage() {
         {/* Hero Section - Dedicated IP */}
         <section className="bg-[#ede9fe] py-16 px-6 pt-36">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
-            <div className="max-w-xl">
+            <div className="max-w-xl order-2 lg:order-1">
               <div className="flex items-center gap-2 mb-3 text-sm font-medium text-[#6c3cbe]">
                 <Server size={18} /> Dedicated IPs
               </div>
@@ -37,7 +37,7 @@ export default function DedicatedIPPage() {
               alt="Dedicated IP Illustration"
               width={520}
               height={360}
-              className="rounded-xl object-cover"
+              className="rounded-xl object-cover order-1 lg:order-2"
             />
           </div>
         </section>
@@ -46,7 +46,7 @@ export default function DedicatedIPPage() {
         <section className="bg-[#fce4f4] py-16 px-6">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center justify-between gap-12">
            
-            <div className="max-w-xl">
+            <div className="max-w-xl order-2 lg:order-1">
               <div className="flex items-center gap-2 mb-3 text-sm font-medium text-[#be185d]">
                 <ShieldCheck size={18} /> What’s a Dedicated IP?
               </div>
@@ -66,7 +66,7 @@ export default function DedicatedIPPage() {
               alt="What is a Dedicated IP?"
               width={520}
               height={360}
-              className="rounded-xl object-cover"
+              className="rounded-xl object-cover order-1 lg:order-2"
             />
           </div>
         </section>
@@ -75,7 +75,7 @@ export default function DedicatedIPPage() {
         <section className="bg-[#dcfce7] py-16 px-6">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
             
-            <div className="max-w-xl">
+            <div className="max-w-xl order-2 lg:order-1">
               <div className="flex items-center gap-2 mb-3 text-sm font-medium text-[#15803d]">
                 <Globe2 size={18} /> Delivery Control
               </div>
@@ -95,7 +95,7 @@ export default function DedicatedIPPage() {
               alt="Deliverability Control"
               width={520}
               height={360}
-              className="rounded-xl object-cover"
+              className="rounded-xl object-cover order-1 lg:order-2"
             />
           </div>
         </section>
@@ -104,7 +104,7 @@ export default function DedicatedIPPage() {
         <section className=" py-16 px-6">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center justify-between gap-12">
             
-            <div className="max-w-xl">
+            <div className="max-w-xl order-2 lg:order-1">
               <div className="flex items-center gap-2 mb-3 text-sm font-medium text-[#92400e]">
                 <CheckCheck size={18} /> Trusted Sending
               </div>
@@ -124,7 +124,7 @@ export default function DedicatedIPPage() {
               alt="Whitelisting IPs"
               width={520}
               height={360}
-              className="rounded-xl object-cover"
+              className="rounded-xl object-cover order-1 lg:order-2"
             />
           </div>
         </section>

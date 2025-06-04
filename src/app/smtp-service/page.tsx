@@ -19,7 +19,7 @@ export default function SmtpServicePage() {
         {/* Hero Section: SMTP Relay */}
         <section className="bg-[#fce4f4] py-16 px-6 pt-36">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
-            <div className="max-w-xl">
+            <div className="max-w-xl order-2 lg:order-1">
               <div className="flex items-center gap-2 mb-3 text-sm font-medium text-[#be185d]">
                 <MailX size={18} /> SMTP Relay Service
               </div>
@@ -39,7 +39,7 @@ export default function SmtpServicePage() {
               alt="SMTP Service Illustration"
               width={620}
               height={360}
-              className="rounded-xl object-cover"
+              className="rounded-xl object-cover order-1 lg:order-2"
             />
           </div>
         </section>
@@ -84,7 +84,7 @@ export default function SmtpServicePage() {
        
 
         {/* Right content */}
-        <div className="max-w-xl">
+        <div className="max-w-xl order-2 lg:order-1">
           <div className="flex items-center gap-2 mb-3 text-sm font-medium text-[#0369a1]">
             <Globe2 size={18} /> Multi-Domain Sending
           </div>
@@ -104,7 +104,7 @@ export default function SmtpServicePage() {
           alt="Multiple Domains"
           width={620}
           height={360}
-          className="rounded-xl object-cover"
+          className="rounded-xl object-cover order-1 lg:order-2"
         />
       </div>
     </section>
@@ -113,7 +113,7 @@ export default function SmtpServicePage() {
         {/* Section 2: High Deliverability */}
         <section className=" py-16 px-6">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center justify-between gap-12">
-            <div className="max-w-xl">
+            <div className="max-w-xl order-2 lg:order-1">
               <div className="flex items-center gap-2 mb-3 text-sm font-medium text-[#0369a1]">
                 <Send size={18} /> High Deliverability
               </div>
@@ -133,7 +133,7 @@ export default function SmtpServicePage() {
               alt="Deliverability"
               width={620}
               height={360}
-              className="rounded-xl object-cover"
+              className="rounded-xl object-cover order-1 lg:order-2"
             />
           </div>
         </section>

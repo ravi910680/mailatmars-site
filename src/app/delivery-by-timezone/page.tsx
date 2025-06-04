@@ -16,7 +16,7 @@ export default function DeliveryByTimezonePage() {
         {/* Hero Section: Send by Timezone */}
         <section className="bg-[#ecfdf5] py-16 px-6 pt-36">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
-            <div className="max-w-xl">
+            <div className="max-w-xl order-2 lg:order-1">
               <div className="flex items-center gap-2 mb-3 text-sm font-medium text-[#047857]">
                 <Clock4 size={18} /> Timezone Delivery
               </div>
@@ -36,7 +36,7 @@ export default function DeliveryByTimezonePage() {
               alt="Timezone Based Delivery"
               width={520}
               height={360}
-              className="rounded-xl object-cover"
+              className="rounded-xl object-cover order-1 lg:order-2"
             />
           </div>
         </section>
@@ -44,7 +44,7 @@ export default function DeliveryByTimezonePage() {
         {/* Feature 1: Reach the Right Customer */}
         <section className="bg-[#fefce8] py-16 px-6">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center justify-between gap-12">
-            <div className="max-w-xl">
+            <div className="max-w-xl order-2 lg:order-1">
               <div className="flex items-center gap-2 mb-3 text-sm font-medium text-[#ca8a04]">
                 <Globe2 size={18} /> Localized Reach
               </div>
@@ -64,7 +64,7 @@ export default function DeliveryByTimezonePage() {
               alt="Localized Delivery"
               width={520}
               height={360}
-              className="rounded-xl object-cover"
+              className="rounded-xl object-cover  order-1 lg:order-2"
             />
           </div>
         </section>
@@ -73,7 +73,7 @@ export default function DeliveryByTimezonePage() {
         <section className="bg-[#f0f9ff] py-16 px-6">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
            
-            <div className="max-w-xl">
+            <div className="max-w-xl order-2 lg:order-1">
               <div className="flex items-center gap-2 mb-3 text-sm font-medium text-[#0369a1]">
                 <TrendingUp size={18} /> Boost Engagement
               </div>
@@ -93,7 +93,7 @@ export default function DeliveryByTimezonePage() {
               alt="Higher Engagement"
               width={520}
               height={360}
-              className="rounded-xl object-cover"
+              className="rounded-xl object-cover order-1 lg:order-2"
             />
           </div>
         </section>
@@ -101,7 +101,7 @@ export default function DeliveryByTimezonePage() {
         {/* Feature 3: Good Sending Practice */}
         <section className=" py-16 px-6">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center justify-between gap-12">
-            <div className="max-w-xl">
+            <div className="max-w-xl order-2 lg:order-1">
               <div className="flex items-center gap-2 mb-3 text-sm font-medium text-[#a21caf]">
                 <ThumbsUp size={18} /> Deliverability Best Practice
               </div>
@@ -121,7 +121,7 @@ export default function DeliveryByTimezonePage() {
               alt="Best Practice Sending"
               width={520}
               height={360}
-              className="rounded-xl object-cover"
+              className="rounded-xl object-cover order-1 lg:order-2"
             />
           </div>
         </section>

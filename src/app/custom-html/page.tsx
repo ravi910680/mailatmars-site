@@ -21,7 +21,7 @@ export default function DragNDropPage() {
         {/* COMPONENT 1: Drag-n-Drop Email Builder */}
        <section className="bg-[#ccfbf1] py-16 px-6 pt-36">
   <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
-    <div className="max-w-xl">
+    <div className="max-w-xl order-2 lg:order-1">
       <div className="flex items-center gap-2 mb-3 text-sm font-medium text-[#0f766e]">
         <MousePointerClick size={18} /> In-built HTML Editor
       </div>
@@ -41,7 +41,7 @@ export default function DragNDropPage() {
       alt="In-Built HTML Editor"
       width={620}
       height={360}
-      className="rounded-xl object-cover"
+      className="rounded-xl object-cover order-1 lg:order-2"
     />
   </div>
 </section>
@@ -51,7 +51,7 @@ export default function DragNDropPage() {
         {/* COMPONENT 2: Responsive Email Design */}
         <section className="bg-[#ede9fe] py-16 px-6">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center justify-between gap-12">
-            <div className="max-w-xl">
+            <div className="max-w-xl order-2 lg:order-1">
               <div className="flex items-center gap-2 mb-3 text-sm font-medium text-[#6c3cbe]">
                 <MonitorSmartphone size={18} /> Responsive Design
               </div>
@@ -71,7 +71,7 @@ export default function DragNDropPage() {
               alt="Responsive Email Design"
               width={620}
               height={360}
-              className="rounded-xl object-cover"
+              className="rounded-xl object-cover order-1 lg:order-2"
             />
           </div>
         </section>
@@ -79,7 +79,7 @@ export default function DragNDropPage() {
         {/* COMPONENT 3: Personalization in Email Templates */}
         <section className="bg-[#fce4f4] py-16 px-6">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
-            <div className="max-w-xl">
+            <div className="max-w-xl order-2 lg:order-1">
               <div className="flex items-center gap-2 mb-3 text-sm font-medium text-[#be185d]">
                 <UserCog size={18} /> Personalization
               </div>
@@ -99,7 +99,7 @@ export default function DragNDropPage() {
               alt="Email Personalization"
               width={520}
               height={360}
-              className="rounded-xl object-cover"
+              className="rounded-xl object-cover order-1 lg:order-2"
             />
           </div>
         </section>
@@ -107,7 +107,7 @@ export default function DragNDropPage() {
         {/* COMPONENT 4: In-Content Unsubscribe Links */}
         <section className=" py-16 px-6">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center justify-between gap-12">
-            <div className="max-w-xl">
+            <div className="max-w-xl order-2 lg:order-1">
               <div className="flex items-center gap-2 mb-3 text-sm font-medium text-[#92400e]">
                 <MailX size={18} /> Unsubscribe Handling
               </div>
@@ -127,7 +127,7 @@ export default function DragNDropPage() {
               alt="Unsubscribe Links"
               width={520}
               height={360}
-              className="rounded-xl object-cover"
+              className="rounded-xl object-cover order-1 lg:order-2"
             />
           </div>
         </section>

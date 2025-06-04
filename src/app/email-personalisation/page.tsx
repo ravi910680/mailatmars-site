@@ -15,7 +15,7 @@ export default function PersonalisationPage() {
         {/* Hero - Personalization Intro */}
         <section className="bg-[#fce4e4] py-16 px-6 pt-36">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
-            <div className="max-w-xl">
+            <div className="max-w-xl order-2 lg:order-1">
               <div className="flex items-center gap-2 mb-3 text-sm font-medium text-[#be185d]">
                 <Smile size={18} /> Personalization
               </div>
@@ -35,7 +35,7 @@ export default function PersonalisationPage() {
               alt="Email Personalization"
               width={520}
               height={360}
-              className="rounded-xl object-cover"
+              className="rounded-xl object-cover order-1 lg:order-2"
             />
           </div>
         </section>
@@ -44,7 +44,7 @@ export default function PersonalisationPage() {
         <section className="bg-[#fef3c7] py-16 px-6">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center justify-between gap-12">
             
-            <div className="max-w-xl">
+            <div className="max-w-xl order-2 lg:order-1">
               <div className="flex items-center gap-2 mb-3 text-sm font-medium text-[#92400e]">
                 <Settings2 size={18} /> How to Personalize
               </div>
@@ -64,7 +64,7 @@ export default function PersonalisationPage() {
               alt="How to Personalize"
               width={520}
               height={360}
-              className="rounded-xl object-cover"
+              className="rounded-xl object-cover order-1 lg:order-2"
             />
           </div>
         </section>
@@ -73,7 +73,7 @@ export default function PersonalisationPage() {
         <section className="bg-[#e0f2fe] py-16 px-6">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
            
-            <div className="max-w-xl">
+            <div className="max-w-xl order-2 lg:order-1">
               <div className="flex items-center gap-2 mb-3 text-sm font-medium text-[#0369a1]">
                 <Users2 size={18} /> Smart Segments
               </div>
@@ -93,7 +93,7 @@ export default function PersonalisationPage() {
               alt="Segmentation Lists"
               width={520}
               height={360}
-              className="rounded-xl object-cover"
+              className="rounded-xl object-cover order-1 lg:order-2"
             />
           </div>
         </section>
@@ -102,7 +102,7 @@ export default function PersonalisationPage() {
         <section className=" py-16 px-6">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center justify-between gap-12">
             
-            <div className="max-w-xl">
+            <div className="max-w-xl order-2 lg:order-1">
               <div className="flex items-center gap-2 mb-3 text-sm font-medium text-[#15803d]">
                 <Bot size={18} /> Automation
               </div>
@@ -122,7 +122,7 @@ export default function PersonalisationPage() {
               alt="Automate Personalized Emails"
               width={520}
               height={360}
-              className="rounded-xl object-cover"
+              className="rounded-xl object-cover order-1 lg:order-2"
             />
           </div>
         </section>

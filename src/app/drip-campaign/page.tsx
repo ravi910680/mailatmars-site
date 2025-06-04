@@ -15,7 +15,7 @@ export default function ABTestingPage() {
         {/* A/B Testing Section */}
         <section className="bg-[#fce4f4] py-16 px-6 pt-36">
   <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
-    <div className="max-w-xl">
+    <div className="max-w-xl order-2 lg:order-1">
       <div className="flex items-center gap-2 mb-3 text-sm font-medium text-[#be185d]">
         <Shuffle size={18} /> Drip Campaign
       </div>
@@ -35,7 +35,7 @@ export default function ABTestingPage() {
       alt="Drip Campaign Email Automation"
       width={420}
       height={360}
-      className="rounded-xl object-cover"
+      className="rounded-xl object-cover order-1 lg:order-2"
     />
   </div>
 </section>
@@ -80,7 +80,7 @@ export default function ABTestingPage() {
     
    
 
-    <div className="max-w-xl">
+    <div className="max-w-xl order-2 lg:order-1">
       <div className="flex items-center gap-2 mb-3 text-sm font-medium text-[#92400e]">
         <BarChart size={18} /> Advanced Analytics
       </div>
@@ -102,7 +102,7 @@ export default function ABTestingPage() {
       alt="Advanced Email Analytics"
       width={620}
       height={360}
-      className="rounded-xl object-cover"
+      className="rounded-xl object-cover order-1 lg:order-2"
     />
   </div>
 </section>
@@ -114,7 +114,7 @@ export default function ABTestingPage() {
         
        
 
-        <div className="max-w-xl">
+        <div className="max-w-xl order-2 lg:order-1">
           <div className="flex items-center gap-2 mb-3 text-sm font-medium text-[#e042f5]">
             <MailX size={18} /> Deliverability Management
           </div>
@@ -136,7 +136,7 @@ export default function ABTestingPage() {
           alt="Bounce and Unsubscribe Handling"
           width={620}
           height={360}
-          className="rounded-xl object-cover"
+          className="rounded-xl object-cover order-1 lg:order-2"
         />
       </div>
     </section>

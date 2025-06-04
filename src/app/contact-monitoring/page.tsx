@@ -17,7 +17,7 @@ export default function ContactMonitoringPage() {
 
          <section className="bg-[#fef3c7] py-16 px-6 pt-36">
   <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
-    <div className="max-w-xl">
+    <div className="max-w-xl order-2 lg:order-1">
       <div className="flex items-center gap-2 mb-3 text-sm font-medium text-[#92400e]">
         <UserPlus size={18} /> Contact Intelligence
       </div>
@@ -37,7 +37,7 @@ export default function ContactMonitoringPage() {
       alt="Contact Monitoring"
       width={620}
       height={360}
-      className="rounded-xl object-cover"
+      className="rounded-xl object-cover order-1 lg:order-2"
     />
   </div>
 </section>

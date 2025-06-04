@@ -16,7 +16,7 @@ export default function PeaktimestampPage() {
         {/* Section 1: Best Send Time Discovery */}
         <section className="bg-[#f0fdf4] py-16 px-6 pt-36">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
-            <div className="max-w-xl">
+            <div className="max-w-xl order-2 lg:order-1">
               <div className="flex items-center gap-2 mb-3 text-sm font-medium text-[#166534]">
                 <Clock8 size={18} /> Smart time-stamp
               </div>
@@ -36,7 +36,7 @@ export default function PeaktimestampPage() {
               alt="Email time-stamp AI"
               width={620}
               height={360}
-              className="rounded-xl object-cover"
+              className="rounded-xl object-cover order-1 lg:order-2"
             />
           </div>
         </section>
@@ -44,7 +44,7 @@ export default function PeaktimestampPage() {
         {/* Section 2: Peak Time Heatmap */}
         <section className="bg-[#f0f9ff] py-16 px-6">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center justify-between gap-12">
-            <div className="max-w-xl">
+            <div className="max-w-xl order-2 lg:order-1">
               <div className="flex items-center gap-2 mb-3 text-sm font-medium text-[#0369a1]">
                 <CalendarClock size={18} /> Peak Hour Insights
               </div>
@@ -64,7 +64,7 @@ export default function PeaktimestampPage() {
               alt="Peak Open Time"
               width={620}
               height={360}
-              className="rounded-xl object-cover"
+              className="rounded-xl object-cover order-1 lg:order-2"
             />
           </div>
         </section>
@@ -72,7 +72,7 @@ export default function PeaktimestampPage() {
         {/* Section 3: Campaign Planning */}
         <section className=" py-16 px-6">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
-            <div className="max-w-xl">
+            <div className="max-w-xl order-2 lg:order-1">
               <div className="flex items-center gap-2 mb-3 text-sm font-medium text-[#a21caf]">
                 <Lightbulb size={18} /> Campaign Strategy
               </div>
@@ -92,7 +92,7 @@ export default function PeaktimestampPage() {
               alt="Campaign Planner"
               width={620}
               height={360}
-              className="rounded-xl object-cover"
+              className="rounded-xl object-cover order-1 lg:order-2"
             />
           </div>
         </section>

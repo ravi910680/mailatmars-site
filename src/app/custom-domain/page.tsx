@@ -15,7 +15,7 @@ export default function CustomDomainPage() {
         {/* Hero Section - Custom Domains */}
         <section className="bg-[#fcecdc] py-16 px-6 pt-36">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
-            <div className="max-w-xl">
+            <div className="max-w-xl order-2 lg:order-1">
               <div className="flex items-center gap-2 mb-3 text-sm font-medium text-[#b45309]">
                 <LinkIcon size={18} /> Custom Domains
               </div>
@@ -37,7 +37,7 @@ export default function CustomDomainPage() {
               alt="Custom Domain Illustration"
               width={620}
               height={360}
-              className="rounded-xl object-cover"
+              className="rounded-xl object-cover  order-1 lg:order-2"
             />
           </div>
         </section>
@@ -46,7 +46,7 @@ export default function CustomDomainPage() {
         <section className="bg-[#fef3c7] py-16 px-6">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center justify-between gap-12">
             
-            <div className="max-w-xl">
+            <div className="max-w-xl order-2 lg:order-1">
               <div className="flex items-center gap-2 mb-3 text-sm font-medium text-[#92400e]">
                 <Star size={18} /> Branding
               </div>
@@ -66,7 +66,7 @@ export default function CustomDomainPage() {
               alt="Branding Benefit"
               width={620}
               height={360}
-              className="rounded-xl object-cover"
+              className="rounded-xl object-cover order-1 lg:order-2"
             />
           </div>
         </section>
@@ -75,7 +75,7 @@ export default function CustomDomainPage() {
         <section className="bg-[#dcfce7] py-16 px-6">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
            
-            <div className="max-w-xl">
+            <div className="max-w-xl order-2 lg:order-1">
               <div className="flex items-center gap-2 mb-3 text-sm font-medium text-[#15803d]">
                 <ShieldCheck size={18} /> Customer Trust
               </div>
@@ -95,7 +95,7 @@ export default function CustomDomainPage() {
               alt="Customer Trust"
               width={620}
               height={360}
-              className="rounded-xl object-cover"
+              className="rounded-xl object-cover order-1 lg:order-2"
             />
           </div>
         </section>
@@ -104,7 +104,7 @@ export default function CustomDomainPage() {
         <section className=" py-16 px-6">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center justify-between gap-12">
            
-            <div className="max-w-xl">
+            <div className="max-w-xl order-2 lg:order-1">
               <div className="flex items-center gap-2 mb-3 text-sm font-medium text-[#0369a1]">
                 <Search size={18} /> Discoverability
               </div>
@@ -124,7 +124,7 @@ export default function CustomDomainPage() {
               alt="Discoverability"
               width={620}
               height={360}
-              className="rounded-xl object-cover"
+              className="rounded-xl object-cover order-1 lg:order-2"
             />
           </div>
         </section>
