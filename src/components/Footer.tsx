@@ -1,6 +1,6 @@
 "use client"
 
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react"
+import { Linkedin } from "lucide-react"
 import Link from "next/link"
 
 export default function Footer() {
@@ -11,13 +11,13 @@ export default function Footer() {
         {/* Brand and Social */}
         <div>
           <p className="text-sm text-gray-300 mb-4">
-            
+            Mailatmars Technologies LLP<br />
+            Pune, Maharashtra
           </p>
           <div className="flex gap-4 mt-4">
-            <Link href="#"><Instagram className="w-5 h-5 text-[#9856F2]" /></Link>
-            <Link href="#"><Twitter className="w-5 h-5 text-[#9856F2]" /></Link>
-            <Link href="#"><Linkedin className="w-5 h-5 text-[#9856F2]" /></Link>
-            <Link href="#"><Facebook className="w-5 h-5 text-[#9856F2]" /></Link>
+            <Link href="https://www.linkedin.com/company/mailatmars-marketing-plateform" target="_blank" rel="noopener noreferrer">
+              <Linkedin className="w-5 h-5 text-[#9856F2]" />
+            </Link>
           </div>
         </div>
 
@@ -49,7 +49,6 @@ export default function Footer() {
           <h4 className="font-semibold mb-4 pb-1">Company</h4>
           <div className="w-20 h-1 bg-white rounded mb-5 mt-5" />
           <ul className="space-y-2 text-sm text-gray-400">
-           
             <li><Link href="/terms-of-service">Terms & service</Link></li>
             <li><Link href="/privacy-policy">Privacy Policy</Link></li>
             <li><Link href="/acceptable-use-policy">Acceptable use policy</Link></li>

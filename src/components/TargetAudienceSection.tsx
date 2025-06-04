@@ -17,7 +17,7 @@ export default function TargetAudienceSection() {
             For planning the right email marketing strategy, you need to find the right customers. Often, email campaigns end up in the inboxes of uninterested customers.
           </p>
           <p className="text-[#1f2c49] text-md leading-relaxed">
-            Mailercloud helps you to target the right set of audience for your product or service.
+            Mailatmars helps you to target the right set of audience for your product or service.
           </p>
         </div>
 

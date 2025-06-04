@@ -17,7 +17,7 @@ export default function CampaignImproveSection() {
             Subscribers will always ignore emails that come from unreliable sources.
           </p>
           <p className="text-[#1f2c49] text-md leading-relaxed">
-            You can improve your email campaigns with Mailercloud and significantly increase your open and click rates.
+            You can improve your email campaigns with Mailatmars and significantly increase your open and click rates.
           </p>
         </div>
 
